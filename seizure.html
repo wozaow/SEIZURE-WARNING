@@ -10,7 +10,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: rainbow 0.1s infinite alternate;
+      animation: rainbow 1s infinite alternate;
     }
 
     @keyframes rainbow {
@@ -28,5 +28,13 @@
 </head>
 <body>
   <h1>Colors of the Rainbow</h1>
+  <script>
+    let speedMultiplier = 1;
+
+    document.body.addEventListener("click", () => {
+      speedMultiplier *= 2;
+      document.body.style.animationDuration = `${0.5 / speedMultiplier}s`;
+    });
+  </script>
 </body>
 </html>
